@@ -3,7 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Iruvé Collective</title>
+<title>Iruvé Collective | Interior Design Studio, Bengaluru</title>
+<meta name="description" content="Iruvé Collective is a Bengaluru interior design studio founded by Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar. Residential and hospitality interiors.">
+<link rel="canonical" href="https://iruve.co.in/">
+<meta name="theme-color" content="#FEFDF9">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Iruvé Collective">
+<meta property="og:title" content="Iruvé Collective | Interior Design Studio, Bengaluru">
+<meta property="og:description" content="A Bengaluru interior design studio founded by Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar.">
+<meta property="og:url" content="https://iruve.co.in/">
+<meta property="og:image" content="https://iruve.co.in/images/img-02.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Iruvé Collective","alternateName":"Iruve Collective","url":"https://iruve.co.in/","logo":"https://iruve.co.in/apple-touch-icon.png","description":"Interior design studio in Bengaluru, India, founded by Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar.","founder":[{"@type":"Person","name":"Vasundhara Shiva Kumar"},{"@type":"Person","name":"Kavya Narayana"},{"@type":"Person","name":"Sayli Khadilkar"}],"areaServed":"Bengaluru, India"}</script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -239,6 +254,22 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
 #project-pandan .ggrid .gthumb:nth-child(9){overflow:hidden}#project-pandan .ggrid .gthumb:nth-child(9) img{transform:scale(1.35);transform-origin:50% 50%}
 .cphones{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:8px 0;font-size:15px}.cphones li{display:flex;align-items:baseline;gap:8px;white-space:nowrap}.cphones li+li{margin-left:32px}.cphones span{color:var(--muted)}.cphones a{color:inherit;border-bottom:1px solid var(--line)}
 @media (max-width:640px){.cphones{flex-direction:column;align-items:center}.cphones li+li{margin-left:0}}
+.shot.vid{position:relative;height:min(78vh,760px);height:min(78dvh,760px);aspect-ratio:9/16;background:#1a1612;overflow:hidden;cursor:default}
+@media (max-width:640px){.shot.vid{height:min(70vh,640px);height:min(70dvh,640px)}}
+.shot.vid img{width:100%;height:100%;object-fit:cover;display:block}
+.shot.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,16,12,.38);border:0;cursor:pointer;transition:background .5s ease-in-out}
+.vplay:hover{background:rgba(20,16,12,.28)}
+.vplay span{width:72px;height:72px;border-radius:50%;border:1px solid rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center}
+.vplay span::before{content:"";margin-left:5px;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.vplay:focus-visible{outline:2px solid #fff;outline-offset:-6px}
+.vplay[hidden]{display:none}
+.vlabel{position:absolute;left:16px;bottom:14px;color:#fff;font-size:13px;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
+.gthumb.vthumb{position:relative}
+.gthumb.vthumb img{filter:brightness(.62)}
+.gthumb.vthumb::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;border:1px solid rgba(255,255,255,.9)}
+.gthumb.vthumb::before{content:"";position:absolute;z-index:1;left:50%;top:50%;margin:-9px 0 0 -5px;border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+@media (prefers-reduced-motion:reduce){.vplay{transition:none}}
 </style>
 </head>
 <body>
@@ -250,7 +281,7 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
 </svg></div>
 <div class="wrap">
   <header>
-    <a class="logo" href="#top" aria-label="Iruvé Collective home"><img src="images/img-01.png" alt=""></a>
+    <a class="logo" href="#top" aria-label="Iruvé Collective home"><img src="images/img-01.png" alt="" loading="lazy" decoding="async"></a>
     <nav aria-label="Main">
       <a href="#top">Home</a>
       <a href="#work">Work</a>
@@ -266,8 +297,8 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
   <div class="hero" id="top">
     <h1>Hello, we are Iruv&eacute;.</h1>
     <div class="slides" role="img" aria-label="Courtyard with terracotta pots, a vintage bicycle and a yellow wall">
-      <div class="slide active"><img src="images/img-02.jpg" alt=""></div>
-      <div class="slide"><img style="object-position:50% 30%" src="images/img-03.jpg" alt=""></div>
+      <div class="slide active"><img src="images/img-02.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="slide"><img style="object-position:50% 30%" src="images/img-03.jpg" alt="" loading="lazy" decoding="async"></div>
     </div>
   </div>
 
@@ -275,11 +306,11 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <h2>Body of work</h2>
     <div class="filters" role="group" aria-label="Filter projects"><button type="button" aria-pressed="true" data-f="All">All</button><button type="button" aria-pressed="false" data-f="Residential Interiors">Residential Interiors</button><button type="button" aria-pressed="false" data-f="Hospitality Interiors">Hospitality Interiors</button><button type="button" aria-pressed="false" data-f="Workspace Interiors">Workspace Interiors</button><button type="button" aria-pressed="false" data-f="Architecture">Architecture</button></div>
     <div class="grid">
-      <a class="card" data-cat="Residential Interiors" href="#ode-to-antiquity"><div class="ph has-img"><img style="object-position:50% 50%" src="images/img-04.jpg" alt="Vintage timber trunk holding a record player, a bamboo gramophone horn and books, with a woven wall panel and a branch in a black vase"><div class="ov" aria-hidden="true"><h4>AN ODE TO ANTIQUITY</h4><p>Residential &middot; Bengaluru</p><p>2026 &middot; 850 sq ft</p><small>View project &rarr;</small></div></div><h3>An Ode to Antiquity</h3><span>Residential Interiors</span></a>
-      <a class="card" data-cat="Residential Interiors" href="#alaya"><div class="ph has-img"><img style="object-position:50% 50%" src="images/img-05.jpg" alt="Dark plastered TV wall with a small textured pot holding a plant on a black stone-topped timber unit, beside an open sliding door to the garden with banana leaves and a birdbath"><div class="ov" aria-hidden="true"><h4>ĀLAYA</h4><p>Residential &middot; Bengaluru</p><p>2026 &middot; 3,000 sq ft</p><small>View project &rarr;</small></div></div><h3>Ālaya</h3><span>Residential Interiors</span></a>
-      <a class="card" data-cat="Workspace Interiors" href="#soft-steel"><div class="ph has-img"><img src="images/img-06.jpg" alt="Soft Steel workspace with a wood-panelled wall, a black disc chandelier, a desk with leather and grey chairs, and a potted plant by the window"><div class="ov" aria-hidden="true"><h4>SOFT STEEL</h4><p>Workspace &middot; Bengaluru</p><p>2025 &middot; 1,250 sq ft</p><small>View project &rarr;</small></div></div><h3>Soft Steel</h3><span>Workspace Interiors</span></a>
-      <a class="card" data-cat="Hospitality Interiors" href="#turmeric-terra"><div class="ph has-img"><img style="transform:scale(1.08);transform-origin:60% 15%" src="images/img-07.jpg" alt="Staircase at Turmeric &amp; Terra with a shaft of daylight from a ceiling opening falling across green walls, a timber handrail and a yellow wall"><div class="ov" aria-hidden="true"><h4>TURMERIC &AMP; TERRA</h4><p>Hospitality &middot; Bengaluru</p><p>2025 &middot; 1,200 sq ft</p><small>View project &rarr;</small></div></div><h3>Turmeric &amp; Terra</h3><span>Hospitality Architecture &amp; Interiors</span></a>
-      <a class="card" data-cat="Hospitality Interiors" href="#pandan"><div class="ph has-img"><img src="images/img-08.jpg" alt="Mint plaster niche with bronze pendants, domed wall lights and wall-mounted steel tables, beside the door studded with raised discs"><div class="ov" aria-hidden="true"><h4>PANDAN</h4><p>Hospitality &middot; Bengaluru</p><p>2026 &middot; 200 sq ft</p><small>View project &rarr;</small></div></div><h3>Pandan</h3><span>Hospitality Interiors</span></a>
+      <a class="card" data-cat="Residential Interiors" href="#ode-to-antiquity"><div class="ph has-img"><img style="object-position:50% 50%" src="images/img-04.jpg" alt="Vintage timber trunk holding a record player, a bamboo gramophone horn and books, with a woven wall panel and a branch in a black vase" decoding="async"><div class="ov" aria-hidden="true"><h4>AN ODE TO ANTIQUITY</h4><p>Residential &middot; Bengaluru</p><p>2026 &middot; 850 sq ft</p><small>View project &rarr;</small></div></div><h3>An Ode to Antiquity</h3><span>Residential Interiors</span></a>
+      <a class="card" data-cat="Residential Interiors" href="#alaya"><div class="ph has-img"><img style="object-position:50% 50%" src="images/img-05.jpg" alt="Dark plastered TV wall with a small textured pot holding a plant on a black stone-topped timber unit, beside an open sliding door to the garden with banana leaves and a birdbath" decoding="async"><div class="ov" aria-hidden="true"><h4>ĀLAYA</h4><p>Residential &middot; Bengaluru</p><p>2026 &middot; 3,000 sq ft</p><small>View project &rarr;</small></div></div><h3>Ālaya</h3><span>Residential Interiors</span></a>
+      <a class="card" data-cat="Workspace Interiors" href="#soft-steel"><div class="ph has-img"><img src="images/img-06.jpg" alt="Soft Steel workspace with a wood-panelled wall, a black disc chandelier, a desk with leather and grey chairs, and a potted plant by the window" decoding="async"><div class="ov" aria-hidden="true"><h4>SOFT STEEL</h4><p>Workspace &middot; Bengaluru</p><p>2025 &middot; 1,250 sq ft</p><small>View project &rarr;</small></div></div><h3>Soft Steel</h3><span>Workspace Interiors</span></a>
+      <a class="card" data-cat="Hospitality Interiors" href="#turmeric-terra"><div class="ph has-img"><img style="transform:scale(1.08);transform-origin:60% 15%" src="images/img-07.jpg" alt="Staircase at Turmeric &amp; Terra with a shaft of daylight from a ceiling opening falling across green walls, a timber handrail and a yellow wall" decoding="async"><div class="ov" aria-hidden="true"><h4>TURMERIC &AMP; TERRA</h4><p>Hospitality &middot; Bengaluru</p><p>2025 &middot; 1,200 sq ft</p><small>View project &rarr;</small></div></div><h3>Turmeric &amp; Terra</h3><span>Hospitality Architecture &amp; Interiors</span></a>
+      <a class="card" data-cat="Hospitality Interiors" href="#pandan"><div class="ph has-img"><img src="images/img-08.jpg" alt="Mint plaster niche with bronze pendants, domed wall lights and wall-mounted steel tables, beside the door studded with raised discs" decoding="async"><div class="ov" aria-hidden="true"><h4>PANDAN</h4><p>Hospitality &middot; Bengaluru</p><p>2026 &middot; 200 sq ft</p><small>View project &rarr;</small></div></div><h3>Pandan</h3><span>Hospitality Interiors</span></a>
     </div>
     <p class="empty" hidden>Projects coming soon.</p>
   </section>
@@ -287,7 +318,7 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
   <section id="about">
     <h2>About us</h2>
     <div class="two">
-      <div><div class="portrait"><img src="images/img-09.jpg" alt="Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar laughing together outside a mint-green storefront"></div></div>
+      <div><div class="portrait"><img src="images/img-09.jpg" alt="Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar laughing together outside a mint-green storefront" loading="lazy" decoding="async"></div></div>
       <div class="about-text">
         <p>Iruv&eacute; (pronounced ee-roo-way) Collective was founded by Vasundhara Shiva Kumar, Kavya Narayana and Sayli Khadilkar. After years of working independently and finding themselves returning to the same projects, collaboration became less a choice than a way of working.</p>
         <p>Iruv&eacute; is the Kannada word for ant. Like a colony, the practice believes in quiet order: many small decisions coming together without a single author, shaped by patience, instinct and connection to form something whole.</p>
@@ -324,9 +355,9 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="two">
       <h2 style="margin:0">Features</h2>
       <ul class="list flist">
-        <li><a class="fthumb" href="https://www.architecturaldigest.in/story/bengaluru-oota-company-the-beloved-restaurant-in-cambridge-layout-expands-with-a-new-floor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-10.jpg" alt="Yellow-walled entry courtyard with terracotta pots"></a><div class="ftext"><span class="fpub">Architectural Digest India</span><a href="https://www.architecturaldigest.in/story/bengaluru-oota-company-the-beloved-restaurant-in-cambridge-layout-expands-with-a-new-floor/" target="_blank" rel="noopener">Oota Company expands with a new floor</a><span class="fmeta">July 2026</span></div></li>
-        <li><a class="fthumb" href="https://www.architectandinteriorsindia.com/projects/taste-the-continuation-of-old-world-bengaluru-inside-this-1200-sq-ft-home-turned-restaurant" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-11.jpg" alt="Dining room with a clay-tile ceiling and long timber tables"></a><div class="ftext"><span class="fpub">Architect &amp; Interiors India</span><a href="https://www.architectandinteriorsindia.com/projects/taste-the-continuation-of-old-world-bengaluru-inside-this-1200-sq-ft-home-turned-restaurant" target="_blank" rel="noopener">Inside a 1,200 sq ft home turned restaurant</a><span class="fmeta">October 2026</span></div></li>
-        <li><a class="fthumb" href="https://archello.com/project/alaya-2" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-12.jpg" alt="Terrace bar with a green fluted counter, two rope-backed stools, a woven pendant over a terracotta tile wall, banana leaves, a yellow wall and garden beyond"></a><div class="ftext"><span class="fpub">Archello</span><a href="https://archello.com/project/alaya-2" target="_blank" rel="noopener">&#256;laya</a><span class="fmeta">October 2026</span></div></li>
+        <li><a class="fthumb" href="https://www.architecturaldigest.in/story/bengaluru-oota-company-the-beloved-restaurant-in-cambridge-layout-expands-with-a-new-floor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-10.jpg" alt="Yellow-walled entry courtyard with terracotta pots" loading="lazy" decoding="async"></a><div class="ftext"><span class="fpub">Architectural Digest India</span><a href="https://www.architecturaldigest.in/story/bengaluru-oota-company-the-beloved-restaurant-in-cambridge-layout-expands-with-a-new-floor/" target="_blank" rel="noopener">Oota Company expands with a new floor</a><span class="fmeta">July 2026</span></div></li>
+        <li><a class="fthumb" href="https://www.architectandinteriorsindia.com/projects/taste-the-continuation-of-old-world-bengaluru-inside-this-1200-sq-ft-home-turned-restaurant" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-11.jpg" alt="Dining room with a clay-tile ceiling and long timber tables" loading="lazy" decoding="async"></a><div class="ftext"><span class="fpub">Architect &amp; Interiors India</span><a href="https://www.architectandinteriorsindia.com/projects/taste-the-continuation-of-old-world-bengaluru-inside-this-1200-sq-ft-home-turned-restaurant" target="_blank" rel="noopener">Inside a 1,200 sq ft home turned restaurant</a><span class="fmeta">October 2026</span></div></li>
+        <li><a class="fthumb" href="https://archello.com/project/alaya-2" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/img-12.jpg" alt="Terrace bar with a green fluted counter, two rope-backed stools, a woven pendant over a terracotta tile wall, banana leaves, a yellow wall and garden beyond" loading="lazy" decoding="async"></a><div class="ftext"><span class="fpub">Archello</span><a href="https://archello.com/project/alaya-2" target="_blank" rel="noopener">&#256;laya</a><span class="fmeta">October 2026</span></div></li>
       </ul>
     </div>
   </section>
@@ -345,8 +376,8 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
         <div class="csocial"><a class="insta" aria-label="Instagram" href="https://www.instagram.com/iruve.collective/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg></a><a class="insta" aria-label="LinkedIn" href="https://www.linkedin.com/company/145265460/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.8 10.6v5.9"/><circle cx="7.8" cy="7.9" r=".7" fill="currentColor"/><path d="M11.6 16.5v-5.9"/><path d="M11.6 13.3c0-1.5 1-2.7 2.5-2.7s2.2 1 2.2 2.6v3.3"/></svg></a></div>
       </div>
       <div class="cphoto"><button type="button" class="lamp" aria-pressed="false" aria-label="Switch the lights on or off">
-      <img class="l-off" src="images/img-13.jpg" alt="Living and dining area with the ceiling lights off, showing a ribbed timber media wall and piano nook">
-      <img class="l-on" src="images/img-14.jpg" alt="The same view with the oval ceiling lights switched on, glowing warm" aria-hidden="true">
+      <img class="l-off" src="images/img-13.jpg" alt="Living and dining area with the ceiling lights off, showing a ribbed timber media wall and piano nook" loading="lazy" decoding="async">
+      <img class="l-on" src="images/img-14.jpg" alt="The same view with the oval ceiling lights switched on, glowing warm" aria-hidden="true" loading="lazy" decoding="async">
     </button></div>
     </div>
   </section>
@@ -364,20 +395,20 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="ggrid" hidden></div>
     <div class="viewer">
     <div class="stage">
-      <img class="shot on" src="images/img-15.jpg" alt="Soft Steel office with a desk, laptop and leather chair against a wood-panelled wall, a black disc chandelier above and a potted plant by the window">
-      <img class="shot" src="images/img-16.jpg" alt="A woman adjusting a brass sunburst sculpture on a green fluted cabinet, beside a wood-panelled wall with six framed black-and-white photographs">
-      <img class="shot" src="images/img-17.jpg" alt="Desk with a fabric screen and an open book, a grey-framed door, and a green fluted cabinet topped with an antique painting and a wooden pot">
-      <img class="shot" src="images/img-18.jpg" alt="Corner of the office with a green fluted cabinet, framed black-and-white prints on a wood-panelled wall and a grey chair">
-      <img class="shot" src="images/img-19.jpg" alt="Meeting table with grey chairs under two green pendant lamps, a large textured artwork and a tall plant">
-      <img data-wide="1" class="shot" src="images/img-20.jpg" alt="Open shelving with black supports and wood shelves holding books and objects, above a cabinet, with two grey chairs, green pendant lamps and a large plant">
-      <img class="shot" src="images/img-21.jpg" alt="Meeting room with a door set into wood panelling, a green pendant lamp, a leafy plant and a dark table with grey chairs">
-      <img class="shot" src="images/img-22.jpg" alt="Meeting room with a wall-mounted screen on wood panelling, a green pendant lamp, a dracaena plant and a dark table">
-      <img class="shot" src="images/img-23.jpg" alt="Corner of the office with a plant by a window with a roman blind, a fluted wood sideboard with objects, and the edge of a desk with a grey chair">
-      <img class="shot" src="images/img-24.jpg" alt="Long fluted wood sideboard topped with a wooden pot, coral, a framed print and a table lamp">
-      <img class="shot" src="images/img-25.jpg" alt="Narrow workspace with a long desk and grey chairs under a linear light, windows on one side and a textured artwork in the foreground">
-      <img class="shot" src="images/img-26.jpg" alt="Window desk with two grey chairs, a black mushroom lamp, framed prints and a roman blind">
-      <img class="shot" src="images/img-27.jpg" alt="Bathroom with grey terrazzo walls, a recessed niche, a wood vanity with a black granite top and wall-hung fittings">
-      <img class="shot" src="images/img-28.jpg" alt="Close view of a terrazzo wall niche holding a coral sculpture, a small cactus and a green vase, above a black flush plate">
+      <img class="shot on" src="images/img-15.jpg" alt="Soft Steel office with a desk, laptop and leather chair against a wood-panelled wall, a black disc chandelier above and a potted plant by the window" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-16.jpg" alt="A woman adjusting a brass sunburst sculpture on a green fluted cabinet, beside a wood-panelled wall with six framed black-and-white photographs" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-17.jpg" alt="Desk with a fabric screen and an open book, a grey-framed door, and a green fluted cabinet topped with an antique painting and a wooden pot" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-18.jpg" alt="Corner of the office with a green fluted cabinet, framed black-and-white prints on a wood-panelled wall and a grey chair" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-19.jpg" alt="Meeting table with grey chairs under two green pendant lamps, a large textured artwork and a tall plant" loading="lazy" decoding="async">
+      <img data-wide="1" class="shot" src="images/img-20.jpg" alt="Open shelving with black supports and wood shelves holding books and objects, above a cabinet, with two grey chairs, green pendant lamps and a large plant" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-21.jpg" alt="Meeting room with a door set into wood panelling, a green pendant lamp, a leafy plant and a dark table with grey chairs" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-22.jpg" alt="Meeting room with a wall-mounted screen on wood panelling, a green pendant lamp, a dracaena plant and a dark table" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-23.jpg" alt="Corner of the office with a plant by a window with a roman blind, a fluted wood sideboard with objects, and the edge of a desk with a grey chair" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-24.jpg" alt="Long fluted wood sideboard topped with a wooden pot, coral, a framed print and a table lamp" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-25.jpg" alt="Narrow workspace with a long desk and grey chairs under a linear light, windows on one side and a textured artwork in the foreground" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-26.jpg" alt="Window desk with two grey chairs, a black mushroom lamp, framed prints and a roman blind" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-27.jpg" alt="Bathroom with grey terrazzo walls, a recessed niche, a wood vanity with a black granite top and wall-hung fittings" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-28.jpg" alt="Close view of a terrazzo wall niche holding a coral sculpture, a small cactus and a green vase, above a black flush plate" loading="lazy" decoding="async">
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 14</span><button type="button" class="vnext">Next</button></div>
   </div>
@@ -394,22 +425,22 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="ggrid" hidden></div>
     <div class="viewer">
     <div class="stage">
-      <img class="shot on" src="images/img-29.jpg" alt="Entry with a yellow wall, a carved timber window, black lanterns, terracotta pots, a bicycle with a flower basket and a patterned tile floor">
-      <img class="shot" src="images/img-30.jpg" alt="View through a green door frame from the yellow-walled terrace into the dining room with a tiled ceiling and folding chairs">
-      <img class="shot" data-wide="1" src="images/img-31.jpg" alt="Courtyard at the threshold of the dining room with a yellow wall, terracotta pots and a bicycle against a weathered wall">
-      <img class="shot" data-wide="1" src="images/img-32.jpg" alt="Main dining room with a clay-tile ceiling, long timber tables, folding chairs and large windows onto greenery">
-      <img class="shot" src="images/img-33.jpg" alt="Dining room with a clay-tile ceiling lit by skylights, a long table, folding chairs, a red woven basket and an open green door">
-      <img class="shot" src="images/img-34.jpg" alt="Corner with a large red woven basket, a driftwood lamp, a fiddle-leaf fig and a vintage rug beside a carved window">
-      <img class="shot" data-wide="1" src="images/img-35.jpg" alt="Dining room seen from one end, with a red woven basket, a driftwood piece on the table, windows and an open green door to the terrace">
-      <img class="shot" data-wide="1" src="images/img-36.jpg" alt="Long timber dining table with folding chairs, a red woven basket and a chalkboard under a tiled ceiling with skylights">
-      <img class="shot" src="images/img-37.jpg" alt="Dining room with a long table set with coconuts and a brass lion, a chalkboard sign and carved windows">
-      <img class="shot" src="images/img-38.jpg" alt="Dining room wall with carved timber windows, a long table, folding chairs and plants">
-      <img class="shot" src="images/img-39.jpg" alt="Long view through the dining room towards a green door, with a vintage rug, plants and an antique carved door">
-      <img class="shot" src="images/img-40.jpg" alt="Dark stone bar counter with a carved wooden figure, flowers and a pile of green coconuts">
-      <img class="shot" src="images/img-41.jpg" alt="Staircase at Turmeric &amp; Terra with a shaft of daylight from a ceiling opening falling across green walls, a timber handrail and a yellow wall">
-      <img class="shot" data-wide="1" src="images/img-42.jpg" alt="Styled bar counter with a carved figure, flowers and a large artwork, beside plants and a green door">
-      <img class="shot" src="images/img-43.jpg" alt="Staircase with an antique carved pillar, a timber handrail, green walls and a leaf-shaped pendant lamp">
-      <img class="shot" src="images/img-44.jpg" alt="Powder room with a wavy-edged mirror, a copper basin, a black tap, white flowers and a warm terrazzo wall">
+      <img class="shot on" src="images/img-29.jpg" alt="Entry with a yellow wall, a carved timber window, black lanterns, terracotta pots, a bicycle with a flower basket and a patterned tile floor" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-30.jpg" alt="View through a green door frame from the yellow-walled terrace into the dining room with a tiled ceiling and folding chairs" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-31.jpg" alt="Courtyard at the threshold of the dining room with a yellow wall, terracotta pots and a bicycle against a weathered wall" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-32.jpg" alt="Main dining room with a clay-tile ceiling, long timber tables, folding chairs and large windows onto greenery" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-33.jpg" alt="Dining room with a clay-tile ceiling lit by skylights, a long table, folding chairs, a red woven basket and an open green door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-34.jpg" alt="Corner with a large red woven basket, a driftwood lamp, a fiddle-leaf fig and a vintage rug beside a carved window" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-35.jpg" alt="Dining room seen from one end, with a red woven basket, a driftwood piece on the table, windows and an open green door to the terrace" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-36.jpg" alt="Long timber dining table with folding chairs, a red woven basket and a chalkboard under a tiled ceiling with skylights" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-37.jpg" alt="Dining room with a long table set with coconuts and a brass lion, a chalkboard sign and carved windows" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-38.jpg" alt="Dining room wall with carved timber windows, a long table, folding chairs and plants" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-39.jpg" alt="Long view through the dining room towards a green door, with a vintage rug, plants and an antique carved door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-40.jpg" alt="Dark stone bar counter with a carved wooden figure, flowers and a pile of green coconuts" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-41.jpg" alt="Staircase at Turmeric &amp; Terra with a shaft of daylight from a ceiling opening falling across green walls, a timber handrail and a yellow wall" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-42.jpg" alt="Styled bar counter with a carved figure, flowers and a large artwork, beside plants and a green door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-43.jpg" alt="Staircase with an antique carved pillar, a timber handrail, green walls and a leaf-shaped pendant lamp" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-44.jpg" alt="Powder room with a wavy-edged mirror, a copper basin, a black tap, white flowers and a warm terrazzo wall" loading="lazy" decoding="async">
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 16</span><button type="button" class="vnext">Next</button></div>
   </div>
@@ -426,15 +457,16 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="ggrid" hidden></div>
     <div class="viewer">
     <div class="stage">
-      <img class="shot on" src="images/img-45.jpg" alt="Woman in a green dress reading a menu on a stool inside the glazed shopfront, beside the disc-studded steel door">
-      <img class="shot" src="images/img-46.jpg" alt="Gelato Factory storefront with a mint-green facade, a steel door studded with raised discs, and a woman in a green dress stepping through, seen through a leaf">
-      <img class="shot" src="images/img-47.jpg" alt="Mint-green storefront with the Kannada and English Gelato Factory sign above a woman in a green dress holding the disc-studded steel door">
-      <img class="shot" src="images/img-48.jpg" alt="Three mint plaster cylinders hanging from the ceiling above a glass display counter and gelato freezer">
-      <img class="shot" src="images/img-49.jpg" alt="Interior along the window with a large tree outside, plaster cylinder lights, a glass-topped counter and a terrazzo floor">
-      <img class="shot" src="images/img-50.jpg" alt="Built-in plaster bench along a wall of domed lights, steel tables and an open disc-studded door onto the street">
-      <img class="shot" src="images/img-08.jpg" alt="Mint plaster niche with three bronze pendants, domed wall lights, wall-mounted steel tables and a terrazzo floor, beside the disc-studded door">
-      <img class="shot" src="images/img-51.jpg" alt="Wall-mounted steel table and a steel stool in front of a wall of domed lights, with a pendant above and the studded door at the right">
-      <img class="shot" src="images/img-52.jpg" alt="Two bronze pendants and two wall-mounted steel tables against a mint plaster wall of domed lights, above a terrazzo floor">
+      <img class="shot on" src="images/img-45.jpg" alt="Woman in a green dress reading a menu on a stool inside the glazed shopfront, beside the disc-studded steel door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-46.jpg" alt="Gelato Factory storefront with a mint-green facade, a steel door studded with raised discs, and a woman in a green dress stepping through, seen through a leaf" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-47.jpg" alt="Mint-green storefront with the Kannada and English Gelato Factory sign above a woman in a green dress holding the disc-studded steel door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-48.jpg" alt="Three mint plaster cylinders hanging from the ceiling above a glass display counter and gelato freezer" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-49.jpg" alt="Interior along the window with a large tree outside, plaster cylinder lights, a glass-topped counter and a terrazzo floor" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-50.jpg" alt="Built-in plaster bench along a wall of domed lights, steel tables and an open disc-studded door onto the street" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-08.jpg" alt="Mint plaster niche with three bronze pendants, domed wall lights, wall-mounted steel tables and a terrazzo floor, beside the disc-studded door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-51.jpg" alt="Wall-mounted steel table and a steel stool in front of a wall of domed lights, with a pendant above and the studded door at the right" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-52.jpg" alt="Two bronze pendants and two wall-mounted steel tables against a mint plaster wall of domed lights, above a terrazzo floor" loading="lazy" decoding="async">
+      <div class="shot vid" data-video="GBwAkjakjRc" data-poster="images/img-48.jpg" role="group" aria-label="Pandan film"><img src="images/img-48.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Pandan film"><span></span></button><span class="vlabel">Film</span></div>
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 9</span><button type="button" class="vnext">Next</button></div>
   </div>
@@ -452,22 +484,22 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="ggrid" hidden></div>
     <div class="viewer">
     <div class="stage">
-      <img class="shot on" src="images/img-53.jpg" alt="View through a timber-framed opening into a plastered wall of sculpted niches, with a sitar, a harmonium, marigolds and a bare branch in a black vase">
-      <img class="shot" src="images/img-54.jpg" alt="Long foyer leading to the living room, with a cane-fronted timber cabinet, bronze figures, a tall plant, a red rug and a balcony beyond">
-      <img class="shot" src="images/img-55.jpg" alt="Cane-fronted cabinet topped with bronze figures and a black ribbed vase with a branch, beside carved pots and a woven rug on a plaster floor">
-      <img class="shot" src="images/img-56.jpg" alt="Living room corner with a woven sofa with timber arms, a vintage calendar print, plants in brass pots, sheer and linen curtains and a red patterned rug">
-      <img class="shot" src="images/img-04.jpg" alt="Vintage timber trunk holding a record player, a bamboo gramophone horn and books, with a woven wall panel and a branch in a black vase">
-      <img class="shot" src="images/img-57.jpg" alt="Balcony extension with a folding timber armchair draped in a red cloth, plants, a bamboo screen and a patterned rug">
-      <img class="shot" src="images/img-58.jpg" alt="Folding armchair with a woven seat and a red cloth beside potted plants and brass planters on a warm plastered balcony">
-      <img class="shot" src="images/img-59.jpg" alt="Timber trunk with iron fittings holding a turntable, a gramophone horn and books, in front of a warm plastered wall">
-      <img class="shot" src="images/img-60.jpg" alt="Music corner with a sitar, a harmonium, a low timber bench, a brass pot of marigolds and sculpted wall niches holding bronze figures">
-      <img class="shot" src="images/img-61.jpg" alt="Open louvered timber door leading to a bedroom passage with a teal cabinet and a carved head, beside a black ribbed vase and a branch">
-      <img class="shot" src="images/img-62.jpg" alt="View from the bedroom through louvered doors towards the common area, with an antique timber wardrobe and a red saree on a hanger">
-      <img class="shot" src="images/img-63.jpg" alt="Close view of panelled timber wardrobe doors with a cast iron latch and knobs">
-      <img class="shot" src="images/img-64.jpg" alt="Louvered timber cabinet doors set in plaster beside a black ribbed vase, an antique mirror door and shelves of bangles">
-      <img class="shot" src="images/img-65.jpg" alt="Wider view of louvered timber cabinet doors set in plaster with shelves of bangles, a tall black vase and an antique mirror door">
-      <img class="shot" src="images/img-66.jpg" alt="Kitchen counter with a black stone top, a hand-painted shell and floral tile wall, timber shutters with round knobs, a copper pot and pomegranates">
-      <img class="shot" src="images/img-67.jpg" alt="Bathroom with grey stone walls, a teardrop-shaped cane-framed mirror, a blue hand-painted basin and a carved stone head">
+      <img class="shot on" src="images/img-53.jpg" alt="View through a timber-framed opening into a plastered wall of sculpted niches, with a sitar, a harmonium, marigolds and a bare branch in a black vase" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-54.jpg" alt="Long foyer leading to the living room, with a cane-fronted timber cabinet, bronze figures, a tall plant, a red rug and a balcony beyond" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-55.jpg" alt="Cane-fronted cabinet topped with bronze figures and a black ribbed vase with a branch, beside carved pots and a woven rug on a plaster floor" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-56.jpg" alt="Living room corner with a woven sofa with timber arms, a vintage calendar print, plants in brass pots, sheer and linen curtains and a red patterned rug" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-04.jpg" alt="Vintage timber trunk holding a record player, a bamboo gramophone horn and books, with a woven wall panel and a branch in a black vase" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-57.jpg" alt="Balcony extension with a folding timber armchair draped in a red cloth, plants, a bamboo screen and a patterned rug" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-58.jpg" alt="Folding armchair with a woven seat and a red cloth beside potted plants and brass planters on a warm plastered balcony" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-59.jpg" alt="Timber trunk with iron fittings holding a turntable, a gramophone horn and books, in front of a warm plastered wall" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-60.jpg" alt="Music corner with a sitar, a harmonium, a low timber bench, a brass pot of marigolds and sculpted wall niches holding bronze figures" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-61.jpg" alt="Open louvered timber door leading to a bedroom passage with a teal cabinet and a carved head, beside a black ribbed vase and a branch" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-62.jpg" alt="View from the bedroom through louvered doors towards the common area, with an antique timber wardrobe and a red saree on a hanger" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-63.jpg" alt="Close view of panelled timber wardrobe doors with a cast iron latch and knobs" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-64.jpg" alt="Louvered timber cabinet doors set in plaster beside a black ribbed vase, an antique mirror door and shelves of bangles" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-65.jpg" alt="Wider view of louvered timber cabinet doors set in plaster with shelves of bangles, a tall black vase and an antique mirror door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-66.jpg" alt="Kitchen counter with a black stone top, a hand-painted shell and floral tile wall, timber shutters with round knobs, a copper pot and pomegranates" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-67.jpg" alt="Bathroom with grey stone walls, a teardrop-shaped cane-framed mirror, a blue hand-painted basin and a carved stone head" loading="lazy" decoding="async">
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 15</span><button type="button" class="vnext">Next</button></div>
   </div>
@@ -484,48 +516,49 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
     <div class="ggrid" hidden></div>
     <div class="viewer">
     <div class="stage">
-      <img class="shot on" data-full="1" src="images/img-68.jpg" alt="Sitting room with a long linen sofa, tweed armchairs and a pleated pendant light before a closed wall of oak panelled doors with round brass knobs, sheer curtains at the left and a sliding door to the terrace at the right">
-      <img class="shot" src="images/img-69.jpg" alt="Living room with a sofa and tweed armchairs facing a wall of oak panelling, with one door open to a shrine cabinet">
-      <img class="shot" src="images/img-70.jpg" alt="Passage with a grid of carved wooden wall tiles, a striped alcove with a cane-fronted cabinet and a view through to the living area and piano">
-      <img class="shot" src="images/img-71.jpg" alt="Double-height living room with a long sofa, two tall white pendant lights, a ceiling fan and a clerestory window with a yellow reveal, opening onto a terrace">
-      <img class="shot" src="images/img-72.jpg" alt="View through the living room to a covered terrace with a green fluted bar, yellow walls and garden beyond, under tall fabric pendants">
-      <img class="shot" src="images/img-73.jpg" alt="Living room corner with a leather armchair by a tall garden window, open timber shelving and a ribbed timber TV wall">
-      <img class="shot" src="images/img-74.jpg" alt="Living room seen from behind the sofa, with a ribbed timber media wall, open shelving with a small white vase, a piano nook and a ceiling fan under a high ceiling">
-      <img class="shot" src="images/img-75.jpg" alt="Media wall with a framed elephant photograph above a digital piano, seen across a dining table set with pomegranates under oval ceiling lights">
-      <img class="shot" src="images/img-76.jpg" alt="The same view with the oval ceiling lights switched on, glowing warm over the dining table">
-      <img class="shot" src="images/img-77.jpg" alt="Dining table with a bench and cane-backed chairs under two ceiling lights, with a green geometric tiled doorway to the kitchen">
-      <img class="shot" data-wide="1" src="images/img-78.jpg" alt="Dining area with four framed abstract artworks on oak panelling, a bowl of pomegranates and a dark stone niche with a plant">
-      <img class="shot" src="images/img-79.jpg" alt="Close view of cane-backed dining chairs at a dark stone-topped table, with framed artworks on an oak panelled wall">
-      <img class="shot" data-wide="1" src="images/img-80.jpg" alt="The same dining area with the ceiling lights switched on">
-      <img class="shot" src="images/img-81.jpg" alt="Kitchen with greige flat-panel cabinets, a dark stone backsplash and counter, a gas hob and pomegranates in a bowl">
-      <img class="shot" src="images/img-82.jpg" alt="Powder room with timber panelling above dark grey tiles, a cane cylinder wall light, a round copper-framed mirror, a fluted vanity with a white vessel basin and a graphic print">
-      <img class="shot" src="images/img-83.jpg" alt="Bedroom with an oak wardrobe and headboard wall, a bed with a green throw and a sheer tasselled curtain">
-      <img class="shot" src="images/img-84.jpg" alt="Dressing corner with a floor-to-ceiling textured wardrobe, a dressing table with a mirror and a striped layered pendant">
-      <img class="shot" src="images/img-85.jpg" alt="Dressing table with a black counter and fluted drawers, a large framed mirror, a round white vase, a hexagonal houndstooth stool and a herringbone wardrobe">
-      <img class="shot" src="images/img-86.jpg" alt="Bathroom with a freestanding white tub, a brass globe wall light, green vertical tiles, a wall-hung toilet and a glass shower door">
-      <img class="shot" src="images/img-87.jpg" alt="Bedroom with cherry-blossom and hummingbird wallpaper above a pink plaster panel, flower-shaped wall lights and timber bedside tables">
-      <img class="shot" src="images/img-88.jpg" alt="Bedroom wall with cherry-blossom wallpaper, a petal-shaped wall light and a timber bedside chest beside a sheer curtain">
-      <img class="shot" src="images/img-89.jpg" alt="Child's bedroom with a white wardrobe with fluted panels, a built-in desk with a cane-backed chair and storage baskets">
-      <img class="shot" src="images/img-90.jpg" alt="Child's room corner with built-in cabinets with fluted lower doors, a tall mirror, oak shelving with ceramic objects and cherry-blossom wallpaper at the left edge">
-      <img class="shot" src="images/img-91.jpg" alt="Dim plastered passage with a pale cylindrical plinth holding a bowl of pomegranates, with three more pomegranates on the floor">
-      <img class="shot" src="images/img-92.jpg" alt="Bedroom with a deer-and-trees woodland wallpaper, a fluted-edge oak door, a cane bedhead and a sliding door to a garden">
-      <img class="shot" src="images/img-93.jpg" alt="Cane-fronted bedside table with a pleated lamp beside a cane headboard, below woodland wallpaper with a stag, and a bathroom doorway on the left">
-      <img class="shot" src="images/img-94.jpg" alt="Bedroom with a tall oak wardrobe with fluted handle detail, a grey wingback chair by a sheer-curtained window and a bed with a block-print quilt and green throw">
-      <img class="shot" src="images/img-95.jpg" alt="Carved timber-framed mirror above a slim timber console with a peace lily, reflecting a bedroom with woodland wallpaper">
-      <img class="shot" src="images/img-05.jpg" alt="Dark plastered TV wall with a small textured pot holding a plant on a black stone-topped timber unit, beside an open sliding door to the garden with banana leaves and a birdbath">
-      <img class="shot" src="images/img-96.jpg" alt="Den with a dark olive velvet sofa, a coffered plaster ceiling, an abstract painting, a cream pendant and sheer curtains on a terrazzo floor">
-      <img class="shot" src="images/img-97.jpg" alt="Bathroom vanity with a black stone counter and white basin, wall-mounted tap, framed mirror and timber shelves on olive plastered walls">
-      <img class="shot" data-wide="1" src="images/img-98.jpg" alt="Granite steps rising to a covered timber pergola terrace with a ceiling fan and yellow walls, framed by large banana leaves and garden greenery">
-      <img class="shot" data-wide="1" src="images/img-12.jpg" alt="Terrace bar with a green fluted counter, two rope-backed stools, a woven pendant over a terracotta tile wall, banana leaves, a yellow wall and garden beyond">
-      <img class="shot" src="images/img-99.jpg" alt="Built-in timber bench with tan cushions and fluted storage beneath open shelves, a framed pomegranate print and a skylight over a doorway to a brick-walled courtyard">
-      <img class="shot" src="images/img-100.jpg" alt="Staircase landing lit by a large pleated drum pendant, with a large abstract artwork, a passage beyond and a rubber plant behind a black railing">
-      <img class="shot" src="images/img-101.jpg" alt="Staircase with floating timber treads, a black railing and a large pleated pendant light">
+      <img class="shot on" data-full="1" src="images/img-68.jpg" alt="Sitting room with a long linen sofa, tweed armchairs and a pleated pendant light before a closed wall of oak panelled doors with round brass knobs, sheer curtains at the left and a sliding door to the terrace at the right" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-69.jpg" alt="Living room with a sofa and tweed armchairs facing a wall of oak panelling, with one door open to a shrine cabinet" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-70.jpg" alt="Passage with a grid of carved wooden wall tiles, a striped alcove with a cane-fronted cabinet and a view through to the living area and piano" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-71.jpg" alt="Double-height living room with a long sofa, two tall white pendant lights, a ceiling fan and a clerestory window with a yellow reveal, opening onto a terrace" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-72.jpg" alt="View through the living room to a covered terrace with a green fluted bar, yellow walls and garden beyond, under tall fabric pendants" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-73.jpg" alt="Living room corner with a leather armchair by a tall garden window, open timber shelving and a ribbed timber TV wall" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-74.jpg" alt="Living room seen from behind the sofa, with a ribbed timber media wall, open shelving with a small white vase, a piano nook and a ceiling fan under a high ceiling" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-75.jpg" alt="Media wall with a framed elephant photograph above a digital piano, seen across a dining table set with pomegranates under oval ceiling lights" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-76.jpg" alt="The same view with the oval ceiling lights switched on, glowing warm over the dining table" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-77.jpg" alt="Dining table with a bench and cane-backed chairs under two ceiling lights, with a green geometric tiled doorway to the kitchen" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-78.jpg" alt="Dining area with four framed abstract artworks on oak panelling, a bowl of pomegranates and a dark stone niche with a plant" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-79.jpg" alt="Close view of cane-backed dining chairs at a dark stone-topped table, with framed artworks on an oak panelled wall" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-80.jpg" alt="The same dining area with the ceiling lights switched on" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-81.jpg" alt="Kitchen with greige flat-panel cabinets, a dark stone backsplash and counter, a gas hob and pomegranates in a bowl" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-82.jpg" alt="Powder room with timber panelling above dark grey tiles, a cane cylinder wall light, a round copper-framed mirror, a fluted vanity with a white vessel basin and a graphic print" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-83.jpg" alt="Bedroom with an oak wardrobe and headboard wall, a bed with a green throw and a sheer tasselled curtain" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-84.jpg" alt="Dressing corner with a floor-to-ceiling textured wardrobe, a dressing table with a mirror and a striped layered pendant" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-85.jpg" alt="Dressing table with a black counter and fluted drawers, a large framed mirror, a round white vase, a hexagonal houndstooth stool and a herringbone wardrobe" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-86.jpg" alt="Bathroom with a freestanding white tub, a brass globe wall light, green vertical tiles, a wall-hung toilet and a glass shower door" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-87.jpg" alt="Bedroom with cherry-blossom and hummingbird wallpaper above a pink plaster panel, flower-shaped wall lights and timber bedside tables" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-88.jpg" alt="Bedroom wall with cherry-blossom wallpaper, a petal-shaped wall light and a timber bedside chest beside a sheer curtain" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-89.jpg" alt="Child's bedroom with a white wardrobe with fluted panels, a built-in desk with a cane-backed chair and storage baskets" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-90.jpg" alt="Child's room corner with built-in cabinets with fluted lower doors, a tall mirror, oak shelving with ceramic objects and cherry-blossom wallpaper at the left edge" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-91.jpg" alt="Dim plastered passage with a pale cylindrical plinth holding a bowl of pomegranates, with three more pomegranates on the floor" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-92.jpg" alt="Bedroom with a deer-and-trees woodland wallpaper, a fluted-edge oak door, a cane bedhead and a sliding door to a garden" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-93.jpg" alt="Cane-fronted bedside table with a pleated lamp beside a cane headboard, below woodland wallpaper with a stag, and a bathroom doorway on the left" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-94.jpg" alt="Bedroom with a tall oak wardrobe with fluted handle detail, a grey wingback chair by a sheer-curtained window and a bed with a block-print quilt and green throw" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-95.jpg" alt="Carved timber-framed mirror above a slim timber console with a peace lily, reflecting a bedroom with woodland wallpaper" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-05.jpg" alt="Dark plastered TV wall with a small textured pot holding a plant on a black stone-topped timber unit, beside an open sliding door to the garden with banana leaves and a birdbath" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-96.jpg" alt="Den with a dark olive velvet sofa, a coffered plaster ceiling, an abstract painting, a cream pendant and sheer curtains on a terrazzo floor" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-97.jpg" alt="Bathroom vanity with a black stone counter and white basin, wall-mounted tap, framed mirror and timber shelves on olive plastered walls" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-98.jpg" alt="Granite steps rising to a covered timber pergola terrace with a ceiling fan and yellow walls, framed by large banana leaves and garden greenery" loading="lazy" decoding="async">
+      <img class="shot" data-wide="1" src="images/img-12.jpg" alt="Terrace bar with a green fluted counter, two rope-backed stools, a woven pendant over a terracotta tile wall, banana leaves, a yellow wall and garden beyond" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-99.jpg" alt="Built-in timber bench with tan cushions and fluted storage beneath open shelves, a framed pomegranate print and a skylight over a doorway to a brick-walled courtyard" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-100.jpg" alt="Staircase landing lit by a large pleated drum pendant, with a large abstract artwork, a passage beyond and a rubber plant behind a black railing" loading="lazy" decoding="async">
+      <img class="shot" src="images/img-101.jpg" alt="Staircase with floating timber treads, a black railing and a large pleated pendant light" loading="lazy" decoding="async">
+      <div class="shot vid" data-video="OaRiDi0xU-Y" data-poster="images/img-101.jpg" role="group" aria-label="Ālaya film"><img src="images/img-101.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Ālaya film"><span></span></button><span class="vlabel">Film</span></div>
       
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 36</span><button type="button" class="vnext">Next</button></div>
   </div>
   </div>
-  <footer><div class="fwrap"><div style="display:contents"><img class="flogo" src="images/img-01.png" alt="Iruvé Collective logo"><div class="fcopy">&copy; 2026 Iruvé Collective. All rights reserved.</div></div></div></footer>
+  <footer><div class="fwrap"><div style="display:contents"><img class="flogo" src="images/img-01.png" alt="Iruvé Collective logo" loading="lazy" decoding="async"><div class="fcopy">&copy; 2026 Iruvé Collective. All rights reserved.</div></div></div></footer>
 </div>
 <script>
 document.querySelectorAll('.filters button').forEach(function(b){
@@ -646,7 +679,10 @@ document.querySelectorAll('.filters button').forEach(function(b){
   function init(proj){
     var shots=[].slice.call(proj.querySelectorAll('.shot')),cnt=proj.querySelector('.vcount'),i=0;
     var grid=proj.querySelector('.ggrid'),viewer=proj.querySelector('.viewer'),mbtns=[].slice.call(proj.querySelectorAll('.vmode button'));
+    function stopVid(){shots.forEach(function(el){if(el.dataset.video){var f=el.querySelector('iframe');if(f){f.remove();el.querySelector('img').hidden=false;el.querySelector('.vplay').hidden=false}}})}
+    function playVid(el){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+el.dataset.video+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';f.title=el.getAttribute('aria-label')||'Film';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');el.appendChild(f);el.querySelector('img').hidden=true;el.querySelector('.vplay').hidden=true}
     function show(n){
+      stopVid();
       shots[i].classList.remove('on');
       i=(n+shots.length)%shots.length;
       shots[i].classList.add('on');
@@ -654,14 +690,16 @@ document.querySelectorAll('.filters button').forEach(function(b){
     }
     function mode(m){
       var g=(m==='grid');
+      stopVid();
       grid.hidden=!g;viewer.hidden=g;
       mbtns.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.m===m?'true':'false')});
     }
     shots.forEach(function(im,n){
       im.addEventListener('click',function(){show(i+1)});
-      var b=document.createElement('button');b.type='button';b.className='gthumb'+(im.dataset.wide?' wide':'')+(im.dataset.full?' full':'');
+      if(im.dataset.video){im.querySelector('.vplay').addEventListener('click',function(e){e.stopPropagation();playVid(im)})}
+      var b=document.createElement('button');b.type='button';b.className='gthumb'+(im.dataset.video?' vthumb':'')+(im.dataset.wide?' wide':'')+(im.dataset.full?' full':'');
       b.setAttribute('aria-label','Open photo '+(n+1)+' of '+shots.length);
-      var t=document.createElement('img');t.src=im.src;t.alt=im.alt;b.appendChild(t);
+      var t=document.createElement('img');var fn=(im.getAttribute('src')||im.dataset.poster||'').split('/').pop();t.src=/^img-\d+\.jpg$/.test(fn)?'images/t/'+fn:(im.src||'');t.loading='lazy';t.decoding='async';t.alt=im.alt||(im.dataset.video?(im.getAttribute('aria-label')||'Film'):'');b.appendChild(t);
       b.addEventListener('click',function(){mode('slide');show(n)});
       grid.appendChild(b);
     });
