@@ -50,9 +50,11 @@ nav a:hover{color:var(--ink)}
 .btn:hover{background:var(--ink);color:var(--bg)}
 .hero h1{margin-bottom:40px}
 .slides{position:relative;aspect-ratio:16/8;overflow:hidden;background:var(--t2)}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 2.2s ease-in-out}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease-in-out}
 .slide.active{opacity:1}
 .slide img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;display:block}
+.m-only{display:none}
+@media (max-width:520px){.m-only{display:block}.slide{transition-duration:.8s}}
 @media (prefers-reduced-motion:reduce){.slide{transition:none}}
 @media (max-width:520px){.slides{aspect-ratio:4/5}}
 .ph{background:var(--t1);width:100%}
@@ -294,8 +296,11 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
   <div class="hero" id="top">
     <h1>Hello, we are Iruv&eacute;.</h1>
     <div class="slides" role="img" aria-label="Courtyard with terracotta pots, a vintage bicycle and a yellow wall">
-      <div class="slide active"><img src="images/img-02.jpg" alt="" loading="lazy" decoding="async"></div>
-      <div class="slide"><img style="object-position:50% 30%" src="images/img-03.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="slide active"><picture><source media="(max-width:520px)" srcset="images/img-29.jpg"><img src="images/img-02.jpg" alt="" loading="lazy" decoding="async"></picture></div>
+      <div class="slide"><picture><source media="(max-width:520px)" srcset="images/img-62.jpg"><img style="object-position:50% 30%" src="images/img-03.jpg" alt="" loading="lazy" decoding="async"></picture></div>
+      <div class="slide m-only"><img src="images/img-92.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="slide m-only"><img src="images/img-51.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="slide m-only"><img src="images/img-39.jpg" alt="" loading="lazy" decoding="async"></div>
     </div>
   </div>
 
@@ -568,13 +573,16 @@ document.querySelectorAll('.filters button').forEach(function(b){
 </script>
 <script>
 (function(){
-  var s=document.querySelectorAll('.slide'),i=0;
+  var s=document.querySelectorAll('.slide'),mq=window.matchMedia('(max-width:520px)');
   if(s.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  setInterval(function(){
-    s[i].classList.remove('active');
-    i=(i+1)%s.length;
-    s[i].classList.add('active');
-  },6500);
+  function list(){return Array.prototype.filter.call(s,function(el){return mq.matches||!el.classList.contains('m-only')})}
+  function tick(){
+    var L=list(),cur=document.querySelector('.slide.active'),k=L.indexOf(cur);
+    if(cur)cur.classList.remove('active');
+    L[(k+1)%L.length].classList.add('active');
+    setTimeout(tick,3200);
+  }
+  setTimeout(tick,3200);
 })();
 </script>
 <script>
