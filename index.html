@@ -270,6 +270,11 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
 .gthumb.vthumb::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;border:1px solid rgba(255,255,255,.9)}
 .gthumb.vthumb::before{content:"";position:absolute;z-index:1;left:50%;top:50%;margin:-9px 0 0 -5px;border-left:15px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
 @media (prefers-reduced-motion:reduce){.vplay{transition:none}}
+.shot,.gthumb img,.card .ph img{color:transparent;font-size:0}
+.gthumb img{opacity:0;transition:opacity .5s ease-in-out}
+.gthumb img.ld{opacity:1}
+.gthumb:hover img.ld{opacity:.86}
+@media (prefers-reduced-motion:reduce){.gthumb img{transition:none}}
 </style>
 </head>
 <body>
@@ -699,7 +704,7 @@ document.querySelectorAll('.filters button').forEach(function(b){
       if(im.dataset.video){im.querySelector('.vplay').addEventListener('click',function(e){e.stopPropagation();playVid(im)})}
       var b=document.createElement('button');b.type='button';b.className='gthumb'+(im.dataset.video?' vthumb':'')+(im.dataset.wide?' wide':'')+(im.dataset.full?' full':'');
       b.setAttribute('aria-label','Open photo '+(n+1)+' of '+shots.length);
-      var t=document.createElement('img');var fn=(im.getAttribute('src')||im.dataset.poster||'').split('/').pop();t.src=/^img-\d+\.jpg$/.test(fn)?'images/t/'+fn:(im.dataset.poster||im.src||'');t.loading='lazy';t.decoding='async';t.alt=im.alt||(im.dataset.video?(im.getAttribute('aria-label')||'Film'):'');b.appendChild(t);
+      var t=document.createElement('img');var fn=(im.getAttribute('src')||im.dataset.poster||'').split('/').pop();t.src=/^img-\d+\.jpg$/.test(fn)?'images/t/'+fn:(im.dataset.poster||im.src||'');t.loading='lazy';t.decoding='async';t.addEventListener('load',function(){t.classList.add('ld')});t.alt=im.alt||(im.dataset.video?(im.getAttribute('aria-label')||'Film'):'');b.appendChild(t);if(t.complete&&t.naturalWidth)t.classList.add('ld');
       b.addEventListener('click',function(){mode('slide');show(n)});
       grid.appendChild(b);
     });
