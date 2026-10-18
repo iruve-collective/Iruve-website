@@ -247,9 +247,9 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
 .shot.vid{position:relative;height:min(78vh,760px);height:min(78dvh,760px);aspect-ratio:9/16;background:#1a1612;overflow:hidden;cursor:default}
 @media (max-width:640px){.shot.vid{height:min(70vh,640px);height:min(70dvh,640px)}}
 .shot.vid img{width:100%;height:100%;object-fit:cover;display:block}
-.shot.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.shot.vid iframe,.shot.vid video{position:absolute;inset:0;width:100%;height:100%;border:0;background:#1a1612;object-fit:contain}
 .vfs{position:absolute;right:10px;bottom:10px;z-index:3;background:rgba(20,16,12,.6);color:#fff;border:0;padding:6px 12px;font:inherit;font-size:12px;letter-spacing:.08em;cursor:pointer}
-.shot.vid:fullscreen iframe{width:100%;height:100%}.shot.vid:fullscreen .vfs{display:none}
+.shot.vid:fullscreen iframe,.shot.vid:fullscreen video{width:100%;height:100%}.shot.vid:fullscreen .vfs{display:none}
 .vplay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,16,12,.38);border:0;cursor:pointer;transition:background .5s ease-in-out}
 .vplay:hover{background:rgba(20,16,12,.28)}
 .vplay span{width:72px;height:72px;border-radius:50%;border:1px solid rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center}
@@ -463,7 +463,7 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
       <img class="shot" src="images/img-08.jpg" alt="Mint plaster niche with three bronze pendants, domed wall lights, wall-mounted steel tables and a terrazzo floor, beside the disc-studded door" loading="lazy" decoding="async">
       <img class="shot" src="images/img-51.jpg" alt="Wall-mounted steel table and a steel stool in front of a wall of domed lights, with a pendant above and the studded door at the right" loading="lazy" decoding="async">
       <img class="shot" src="images/img-52.jpg" alt="Two bronze pendants and two wall-mounted steel tables against a mint plaster wall of domed lights, above a terrazzo floor" loading="lazy" decoding="async">
-      <div class="shot vid" data-video="GBwAkjakjRc" data-poster="images/img-48.jpg" role="group" aria-label="Pandan film"><img src="images/img-48.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Pandan film"><span></span></button><span class="vlabel">Film</span></div>
+      <div class="shot vid" data-video="GBwAkjakjRc" data-mp4="videos/pandan.mp4" data-poster="images/img-48.jpg" role="group" aria-label="Pandan film"><img src="images/img-48.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Pandan film"><span></span></button><span class="vlabel">Film</span></div>
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 9</span><button type="button" class="vnext">Next</button></div>
   </div>
@@ -549,7 +549,7 @@ footer .fwrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center
       <img class="shot" src="images/img-99.jpg" alt="Built-in timber bench with tan cushions and fluted storage beneath open shelves, a framed pomegranate print and a skylight over a doorway to a brick-walled courtyard" loading="lazy" decoding="async">
       <img class="shot" src="images/img-100.jpg" alt="Staircase landing lit by a large pleated drum pendant, with a large abstract artwork, a passage beyond and a rubber plant behind a black railing" loading="lazy" decoding="async">
       <img class="shot" src="images/img-101.jpg" alt="Staircase with floating timber treads, a black railing and a large pleated pendant light" loading="lazy" decoding="async">
-      <div class="shot vid" data-video="OaRiDi0xU-Y" data-poster="images/alaya-film.jpg" role="group" aria-label="Ālaya film"><img src="images/alaya-film.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Ālaya film"><span></span></button><span class="vlabel">Film</span></div>
+      <div class="shot vid" data-video="OaRiDi0xU-Y" data-mp4="videos/alaya.mp4" data-poster="images/alaya-film.jpg" role="group" aria-label="Ālaya film"><img src="images/alaya-film.jpg" alt="" loading="lazy" decoding="async"><button type="button" class="vplay" aria-label="Play the Ālaya film"><span></span></button><span class="vlabel">Film</span></div>
       
     </div>
     <div class="vctrl"><button type="button" class="vprev">Previous</button><span class="vcount" aria-live="polite">1 / 36</span><button type="button" class="vnext">Next</button></div>
@@ -676,8 +676,9 @@ document.querySelectorAll('.filters button').forEach(function(b){
   function init(proj){
     var shots=[].slice.call(proj.querySelectorAll('.shot')),cnt=proj.querySelector('.vcount'),i=0;
     var grid=proj.querySelector('.ggrid'),viewer=proj.querySelector('.viewer'),mbtns=[].slice.call(proj.querySelectorAll('.vmode button'));
-    function stopVid(){shots.forEach(function(el){if(el.dataset.video){var f=el.querySelector('iframe');if(f){f.remove();var xb=el.querySelector('.vfs');if(xb)xb.remove();el.querySelector('img').hidden=false;el.querySelector('.vplay').hidden=false}}})}
-    function playVid(el){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+el.dataset.video+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';f.title=el.getAttribute('aria-label')||'Film';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');el.appendChild(f);var xb=document.createElement('button');xb.type='button';xb.className='vfs';xb.textContent='Full screen';xb.addEventListener('click',function(e){e.stopPropagation();var r=el.requestFullscreen||el.webkitRequestFullscreen;if(r)r.call(el);else{f.requestFullscreen&&f.requestFullscreen()}});el.appendChild(xb);el.querySelector('img').hidden=true;el.querySelector('.vplay').hidden=true}
+    function stopVid(){shots.forEach(function(el){if(el.dataset.video){var f=el.querySelector('iframe,video');if(f){f.remove();var xb=el.querySelector('.vfs');if(xb)xb.remove();el.querySelector('img').hidden=false;el.querySelector('.vplay').hidden=false}}})}
+    function addFs(el,f){var xb=document.createElement('button');xb.type='button';xb.className='vfs';xb.textContent='Full screen';xb.addEventListener('click',function(e){e.stopPropagation();var r=el.requestFullscreen||el.webkitRequestFullscreen;if(f.tagName==='VIDEO'&&f.webkitEnterFullscreen&&!r){f.webkitEnterFullscreen()}else if(r){r.call(el)}else if(f.requestFullscreen){f.requestFullscreen()}});el.appendChild(xb);}
+    function playVid(el){var f;if(el.dataset.mp4){f=document.createElement('video');f.src=el.dataset.mp4;f.controls=true;f.autoplay=true;f.playsInline=true;f.setAttribute('playsinline','');f.setAttribute('controlsList','nodownload');f.poster=el.dataset.poster||'';f.title=el.getAttribute('aria-label')||'Film';el.appendChild(f);addFs(el,f);el.querySelector('img').hidden=true;el.querySelector('.vplay').hidden=true;return}f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+el.dataset.video+'?autoplay=1&rel=0&playsinline=1&modestbranding=1';f.title=el.getAttribute('aria-label')||'Film';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');el.appendChild(f);addFs(el,f);el.querySelector('img').hidden=true;el.querySelector('.vplay').hidden=true}
     function show(n){
       stopVid();
       shots[i].classList.remove('on');
