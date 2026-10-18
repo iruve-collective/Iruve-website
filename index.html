@@ -669,6 +669,10 @@ document.querySelectorAll('.filters button').forEach(function(b){
     else if(h&&h.length>1){var t=document.querySelector(h);if(t)t.scrollIntoView()}
   }
   window.addEventListener('hashchange',route);route();
+  function stopAllVideos(){document.querySelectorAll('.shot.vid').forEach(function(el){var f=el.querySelector('iframe,video');if(!f)return;if(f.tagName==='VIDEO'){try{f.pause()}catch(e){}}f.remove();var xb=el.querySelector('.vfs');if(xb)xb.remove();var im=el.querySelector('img'),pl=el.querySelector('.vplay');if(im)im.hidden=false;if(pl)pl.hidden=false})}
+  window.addEventListener('hashchange',stopAllVideos);
+  window.addEventListener('pagehide',stopAllVideos);
+  document.addEventListener('visibilitychange',function(){if(document.hidden)stopAllVideos()});
 })();
 </script>
 <script>
