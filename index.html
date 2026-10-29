@@ -688,25 +688,6 @@ document.querySelectorAll('.filters button').forEach(function(b){
     p1:Math.random()*TAU,p2:Math.random()*TAU,pause:0,sf:1,avoid:null,cool:0,seekUntil:0,nextSeek:5+Math.random()*7,target:null
   }});
   window.__antHandoff=function(l){for(var k=0;k<ants.length&&k<l.length;k++){ants[k].x=l[k].x;ants[k].y=l[k].y;ants[k].ang=l[k].ang;ants[k].pause=0}};
-  /* keep the ants off the photos inside a project (the grid, or the single photo in slideshow view) */
-  var PR=null,PAD=22;
-  function photoRect(){
-    var e=document.querySelector('.project:not([hidden]) .ggrid:not([hidden])')||document.querySelector('.project:not([hidden]) .shot.on');
-    if(!e)return null;var r=e.getBoundingClientRect();return (r.width<2||r.height<2)?null:r}
-  /* nearest way out of the photo area that still lands inside the screen; null if the photos fill the screen */
-  function exitOf(a){
-    var c=[[a.x-PR.left+7,Math.PI,-1,0],[PR.right+7-a.x,0,1,0],[a.y-PR.top+7,-Math.PI/2,0,-1],[PR.bottom+7-a.y,Math.PI/2,0,1]].sort(function(p,q){return p[0]-q[0]});
-    for(var k=0;k<4;k++){var x=a.x+c[k][2]*c[k][0],y=a.y+c[k][3]*c[k][0];if(x>=8&&x<=W-8&&y>=8&&y<=H-8)return c[k]}
-    return null}
-  function keepOut(a,dt){
-    if(!PR)return;
-    if(a.x>PR.left-6&&a.x<PR.right+6&&a.y>PR.top-6&&a.y<PR.bottom+6){
-      var e=exitOf(a);
-      if(!e){a.el.style.visibility='hidden';return}
-      a.el.style.visibility='';
-      var mv=Math.min(e[0],170*dt);a.x+=e[2]*mv;a.y+=e[3]*mv;a.ang=e[1]+(Math.random()-.5)*.4;a.pause=0
-    }else a.el.style.visibility=''
-  }
   function nearest(a){var best=null,bd=1e9;ants.forEach(function(b){if(b===a)return;var d=Math.hypot(b.x-a.x,b.y-a.y);if(d<bd){bd=d;best=b}});return best}
   function render(a){
     var sw=Math.sin(a.phase),da=a.ang+0.07*sw;
@@ -716,7 +697,6 @@ document.querySelectorAll('.filters button').forEach(function(b){
   }
   function step(a,dt){
     a.t+=dt;if(a.cool>0)a.cool-=dt;
-    keepOut(a,dt);
     if(a.pause>0){a.pause-=dt;a.el.classList.add('still');render(a);return}
     a.el.classList.remove('still');
     var turn=0.8*Math.sin(a.t/1.9+a.p1)+0.5*Math.sin(a.t/0.83+a.p2)+0.3*Math.sin(a.t/3.7+a.p1*2);
@@ -732,16 +712,6 @@ document.querySelectorAll('.filters button').forEach(function(b){
       turn=Math.max(-1.6,Math.min(1.6,d1*2.2))+a.jit*0.5;
     }else{turn+=a.jit}
     if(a.avoid&&a.t<a.avoid.until&&!near){var d2=wrap(a.avoid.ang-a.ang);turn=Math.max(-2.7,Math.min(2.7,d2*3.6))+a.jit*0.3}
-    if(PR){
-      /* approaching the photos: ease onto a course along the edge, like an ant following a wall; no sudden swerve */
-      var cx=Math.max(PR.left,Math.min(a.x,PR.right)),cy=Math.max(PR.top,Math.min(a.y,PR.bottom)),ddx=a.x-cx,ddy=a.y-cy,dd=Math.hypot(ddx,ddy),Z=95;
-      if(dd<Z&&dd>0.5&&Math.cos(a.ang)*ddx+Math.sin(a.ang)*ddy<0){
-        var aw=Math.atan2(ddy,ddx),t1=aw+Math.PI/2,t2=aw-Math.PI/2,tg=Math.abs(wrap(t1-a.ang))<Math.abs(wrap(t2-a.ang))?t1:t2,
-            k=Math.max(0,1-dd/(PAD+14))*1.1,wx=Math.cos(tg)+Math.cos(aw)*k,wy=Math.sin(tg)+Math.sin(aw)*k,
-            w=Math.pow(1-dd/Z,1.5);
-        turn=turn*(1-w)+Math.max(-1.5,Math.min(1.5,wrap(Math.atan2(wy,wx)-a.ang)*1.8))*w
-      }
-    }
     a.sf+=(1-a.sf)*Math.min(1,dt*1.6);
     var spd=a.speed*a.sf;
     a.ang+=turn*dt;
@@ -770,15 +740,16 @@ document.querySelectorAll('.filters button').forEach(function(b){
       a.seekUntil=b.seekUntil=0;a.nextSeek=a.t+9+Math.random()*8;b.nextSeek=b.t+9+Math.random()*8;
     }
   }
-  var last=null;
+  var last=null,hid=false;
   function frame(ts){
     if(last===null)last=ts;
     var dt=Math.min((ts-last)/1000,0.1);last=ts;
-    PR=photoRect();
+    /* no ants on project pages: they only roam the home page */
+    var onProject=!!document.querySelector('.project:not([hidden])');
+    if(onProject){if(!hid){hid=true;ants.forEach(function(a){a.el.style.visibility='hidden'})}requestAnimationFrame(frame);return}
+    if(hid){hid=false;ants.forEach(function(a){a.el.style.visibility=''})}
     ants.forEach(function(a){step(a,dt)});
     collide();
-    if(PR)ants.forEach(function(a){keepOut(a,dt);render(a)});
-    else ants.forEach(function(a){a.el.style.visibility=''});
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
